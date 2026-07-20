@@ -37224,7 +37224,7 @@ CMD:goto(playerid, const params[])
 	{
 	    SendClientMessage(playerid, COLOR_SYNTAX, "Usage: /goto [playerid/location]");
  		SendClientMessage(playerid, COLOR_WHITE, "Locations: LS, SF, LV, Grove, Idlewood, Unity, Jefferson, Market, Airport, Bank");
- 		SendClientMessage(playerid, COLOR_WHITE, "Locations: Dealership, DMV, Casino, Allsaints, Mall, Paintball");
+ 		SendClientMessage(playerid, COLOR_WHITE, "Locations: Dealership, DMV, Casino, Allsaints, Mall, Paintball, BM");
 		return 1;
 	}
 
@@ -37323,7 +37323,13 @@ CMD:goto(playerid, const params[])
         TeleportToCoords(playerid, 1128.7247,-1441.3911,15.7969,1.2469, 0, 0);
         SendClientMessage(playerid, COLOR_GREY2, "Teleported to Mall.");
         SendAdminMessage(COLOR_RED, "%s has teleported to Mall.", GetRPName(playerid));
-	}
+	}|
+	else if(!strcmp(params, "bm", true))
+    {
+        TeleportToCoords(playerid, 162.2012, -178.4594, 1.5836, 10.0, 0, 0);
+        SendClientMessage(playerid, COLOR_GREY2, "Teleported to Black Market.");
+        SendAdminMessage(COLOR_RED, "%s has teleported to Black Marketall.", GetRPName(playerid));
+	}|
 	else
 	{
 		if(!IsPlayerConnected(targetid))
