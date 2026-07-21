@@ -18,3 +18,5 @@ git commit -m "fix(voicechat): radio disconnect doesnt remove ..."
 .
 added dynamic vendor ownership system
 added new injured system 
+added hospital bed time system
+added new random hospital bed
